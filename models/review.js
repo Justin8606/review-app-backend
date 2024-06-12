@@ -11,5 +11,5 @@ const schema = mongoose.Schema(
 )
 
 let reviewModel = mongoose.model("reviews",schema)          //schema turned into model
-module.exports = {reviewModel}
+module.exports = {reviewModel}                              // after this go app.js and import it.
 
