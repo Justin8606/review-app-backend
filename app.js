@@ -40,6 +40,18 @@ app.post("/view",(req,res)=>{
     )
 })
 
+app.post("/search",(req,res)=>{
+    // res.send("search page")      //next give review model
+    let input = req.body            //seperate things are needed,but in view whole things are needed.
+    reviewModel.find(input).then((data)=>{
+        res.json(data)
+    }).catch(
+        (error)=>{
+            res.json(error)
+        }
+    )
+})
+
 app.listen(8080,()=>{
     console.log("Server Started")
 })
