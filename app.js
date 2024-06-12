@@ -3,7 +3,9 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 
 
-const review = require("./models/review")   //importing whole page into this.after this put req.body in input.
+const reviews = require("./models/review")   //importing whole page into this.after this put req.body in input. review changed to reviews.
+
+const {reviewModel} = require("./models/review")    
 
 const app = express()           //express function.
 app.use(cors())             //cors is for security,cors function.
