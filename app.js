@@ -14,7 +14,9 @@ app.use(express.json())
 
 app.post("/add",(req,res)=>{
     let input = req.body
-    console.log(input)          //check if it is working on or not.there is one more step.app.use(express.json()) 
+    let review = new reviewModel(input) //next we are goint to console review
+    // console.log(input)          //check if it is working on or not.there is one more step.app.use(express.json()) 
+    console.log(review)     //this step is to console object into the terminal.
     res.send("add page")            // /add is a request and response to this is the add page.(get is changed to post(because of security and inputs(doubt)))
 })
 
