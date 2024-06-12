@@ -25,7 +25,8 @@ app.post("/add",(req,res)=>{
     review.save()
 
     console.log(review)     //this step is to console object into the terminal.(actually here actually the model is creating.)(next connect mongoose)
-    res.send("add page")            // /add is a request and response to this is the add page.(get is changed to post(because of security and inputs(doubt)))
+    // res.send("add page")            // /add is a request and response to this is the add page.(get is changed to post(because of security and inputs(doubt)))
+    res.json({"status":"success"})
 })
 
 app.listen(8080,()=>{
